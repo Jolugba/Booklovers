@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "764383678485",
+    "firebase_url": "https://booklovers-e2034.firebaseio.com",
+    "project_id": "booklovers-e2034",
+    "storage_bucket": "booklovers-e2034.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764383678485:android:c85f3e321be04d96007e1c",
+        "android_client_info": {
+          "package_name": "com.tinuade.booklovers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764383678485-4srg2fhl5htrdl19id9jeeo798vp3d15.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tinuade.booklovers",
+            "certificate_hash": "a8322052069b6ad105956df4c105604c7af47113"
+          }
+        },
+        {
+          "client_id": "764383678485-lo6eeue54ujoso5b4cebvs1qt0iscqba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcSxvtwl3H5zGu8qNkPLYlUG_HiHOEZk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764383678485-lo6eeue54ujoso5b4cebvs1qt0iscqba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
