@@ -55,7 +55,7 @@ public class Sign_up extends AppCompatActivity {
 
         mSignInLink.setOnClickListener(v -> {
 
-            Intent intent = new Intent(Sign_Up.this, Sign_In.class);
+            Intent intent = new Intent(Sign_up.this, Sign_In.class);
             startActivity(intent);
         });
         mSignUpButton.setOnClickListener(v -> signUpButton());
@@ -64,21 +64,21 @@ public class Sign_up extends AppCompatActivity {
 
     private void signUpButton() {
         if (TextUtils.isEmpty(mFullname.getText().toString()) && mFullname.getText().toString().length() < 3) {
-            Toast.makeText(Sign_Up.this, "Please Enter a valid Name", Toast.LENGTH_LONG).show();
+            Toast.makeText(Sign_up.this, "Please Enter a valid Name", Toast.LENGTH_LONG).show();
         } else if (TextUtils.isEmpty(mEmailAddress.getText().toString()) && !Patterns.EMAIL_ADDRESS.matcher(mEmailAddress.getText().toString()).matches()) {
-            Toast.makeText(Sign_Up.this, "Please Enter a valid Email Address", Toast.LENGTH_LONG).show();
+            Toast.makeText(Sign_up.this, "Please Enter a valid Email Address", Toast.LENGTH_LONG).show();
         } else if (TextUtils.isEmpty(mPassword.getText().toString())) {
-            Toast.makeText(Sign_Up.this, "Please Enter a valid Password", Toast.LENGTH_LONG).show();
+            Toast.makeText(Sign_up.this, "Please Enter a valid Password", Toast.LENGTH_LONG).show();
         } else if (TextUtils.isEmpty(mPassword.getText().toString()) && mEmailAddress.getText().toString().isEmpty()) {
-            Toast.makeText(Sign_Up.this, "Please Enter a valid Password and Email Address", Toast.LENGTH_LONG).show();
+            Toast.makeText(Sign_up.this, "Please Enter a valid Password and Email Address", Toast.LENGTH_LONG).show();
         } else if (TextUtils.isEmpty(mConfirmPassword.getText().toString()) && !mEmailAddress.getText().toString().contains("@")) {
-            Toast.makeText(Sign_Up.this, "Please Enter a valid Password", Toast.LENGTH_LONG).show();
+            Toast.makeText(Sign_up.this, "Please Enter a valid Password", Toast.LENGTH_LONG).show();
         } else if (!mPassword.getText().toString().equalsIgnoreCase(mConfirmPassword.getText().toString())) {
-            Toast.makeText(Sign_Up.this, "Passwords do not match", Toast.LENGTH_LONG).show();
+            Toast.makeText(Sign_up.this, "Passwords do not match", Toast.LENGTH_LONG).show();
             mPassword.setText("");
             mConfirmPassword.setText("");
         } else if (TextUtils.isEmpty(mPhonenumber.getText().toString()) && mPhonenumber.getText().toString().length() < 9) {
-            Toast.makeText(Sign_Up.this, "Please Enter a valid Phone Number", Toast.LENGTH_LONG).show();
+            Toast.makeText(Sign_up.this, "Please Enter a valid Phone Number", Toast.LENGTH_LONG).show();
         } else
             //Register User
 
@@ -97,14 +97,14 @@ public class Sign_up extends AppCompatActivity {
 
                         users.child(mAuth.getCurrentUser().getUid())
                                 .setValue(user)
-                                .addOnSuccessListener(aVoid -> Toast.makeText(Sign_Up.this, "Registration Successful", Toast.LENGTH_LONG).show())
-                                .addOnFailureListener(e -> Toast.makeText(Sign_Up.this, "Registration Failed", Toast.LENGTH_LONG).show());
+                                .addOnSuccessListener(aVoid -> Toast.makeText(Sign_up.this, "Registration Successful", Toast.LENGTH_LONG).show())
+                                .addOnFailureListener(e -> Toast.makeText(Sign_up.this, "Registration Failed", Toast.LENGTH_LONG).show());
                         loadingProgressBar.setVisibility(View.INVISIBLE);
 
-                        startActivity(new Intent(Sign_Up.this, Book.class));
+                        startActivity(new Intent(Sign_up.this, Book.class));
                         finish();
                     })
-                    .addOnFailureListener(e -> Toast.makeText(Sign_Up.this, "Authentication Failed: " + e.getMessage(), Toast.LENGTH_LONG).show());
+                    .addOnFailureListener(e -> Toast.makeText(Sign_up.this, "Authentication Failed: " + e.getMessage(), Toast.LENGTH_LONG).show());
 
     }
 }
